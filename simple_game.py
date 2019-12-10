@@ -2,6 +2,7 @@ import pygame
 from pygame.locals import *
 
 from init_functions import drawGrid
+from init_functions import initPlayer
 
 def main():
 
@@ -12,7 +13,7 @@ def main():
     width = 7
     height = 7
 
-    block_size = 15
+    block_size = int(screensize / 8)
 
     window = pygame.display.set_mode((screensize, screensize))
     done = False
@@ -22,7 +23,8 @@ def main():
             if event.type == pygame.QUIT:
                 done = True
 
-        drawGrid(7, 7, screensize / 8, window)
+        drawGrid(7, 7, block_size, window)
+        player = initPlayer(width, height, block_size, window)
         
         pygame.display.flip()
 
