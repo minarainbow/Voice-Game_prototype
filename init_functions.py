@@ -11,10 +11,8 @@ def drawGrid(width, height, block_size, window):
             pygame.draw.rect(window, (255,255,255), rect)
 
 
-def initPlayer(width, height, block_size, window):
+def initPlayer(block_size, window):
     player = pygame.image.load('doggo.tif').convert()
     player = pygame.transform.scale(player, (block_size, block_size))
-
-    window.blit(player, (0, (height - 1) * (block_size + 3)))
     
     return player
