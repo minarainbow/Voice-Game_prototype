@@ -1,0 +1,8 @@
+def drawGrid(width, height, block_size, window):
+    background_colour = (0,0,0)
+    window.fill(background_colour)
+    
+    for y in range(width):
+        for x in range(height):
+            rect = pygame.Rect(x*block_size, y*block_size, block_size, block_size)
+            pygame.draw.rect(window, (255,255,255), rect)
