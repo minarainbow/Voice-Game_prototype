@@ -9,3 +9,5 @@ def drawGrid(width, height, block_size, window):
         for x in range(height):
             rect = pygame.Rect(x*(block_size + 3), y*(block_size + 3), block_size, block_size)
             pygame.draw.rect(window, (255,255,255), rect)
+
+
